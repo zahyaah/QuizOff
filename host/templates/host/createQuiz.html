@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Quiz</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .form-container {
+            max-width: 500px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="number"],
+        .form-container input[type="datetime-local"],
+        .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+
+        .form-container button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .form-container button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Create Quiz</h2>
+        <form method="post" id="create-quiz-form"> {% csrf_token %}
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required></textarea>
+
+            <label for="numberOfQuestions">Number of Questions:</label>
+            <input type="number" id="numberOfQuestions" name="numberOfQuestions" required>
+
+            <label for="duration">Duration:</label>
+            <input type="number" id="duration" name="duration" required>
+            <select id="durationUnit" name="durationUnit">
+                <option value="minutes">Minutes</option>
+                <option value="hours">Hours</option>
+            </select>
+
+
+            <label for="scheduledTime">Scheduled Time:</label>
+            <input type="datetime-local" id="scheduledTime" name="scheduledTime" required>
+
+            <label for="additionalNote">Additional Note:</label>
+            <textarea id="additionalNote" name="additionalNote"></textarea>
+
+            <button type="submit">Create Quiz</button>
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById('create-quiz-form');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Handle form submission logic here
+        });
+    </script>
+</body>
+</html>
+
+
+
