@@ -1,7 +1,7 @@
 
 # QuizOff
 
-This document provides instructions for setting up and running the "Project Name" Django project.
+This document provides instructions for setting up and running this Django project.
 
 ## Prerequisites
 
