@@ -25,7 +25,7 @@ Navigate to the project directory
 
 Activate the virtual environment
 
-    justquiz\Scripts\activate.bat
+    justquiz\bit\activate
 
 Install project dependencies from the requirements.txt file:
 
