@@ -23,9 +23,13 @@ Navigate to the project directory
     
     cd QuizOff
 
-Activate the virtual environment
+Create a virtual environment
 
-    justquiz\bit\activate
+    python -m venv <name>
+
+Activate the virtual environment
+    
+    .\<name>\Scripts\activate
 
 Install project dependencies from the requirements.txt file:
 
@@ -45,15 +49,19 @@ Navigate to the project directory
     
     cd QuizOff
 
-Activate the virtual environment
+Create a virtual environment 
 
-    source justquiz\Scripts\activate
+    python3 -m venv <name>
+
+Activate the virtual environment
+    
+    source <name>/bin/activate
 
 Install project dependencies from the requirements.txt file:
 
-    pip install -r requirements.txt
+    pip3 install -r requirements.txt
 
 Start the Django development server
 
-    python manage.py runserver
+    python3 manage.py runserver
 
